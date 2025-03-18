@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Административные процедуры по заявлениям юридических лиц</title>
+
+</head>
+<body>
+
+<h1>Административные процедуры по заявлениям юридических лиц</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/juridical.css' %}">
+<div class = "container">
+    <a href="{% url 'money' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/money.png' %}')" ></a>
+    <a href="{% url 'stroitelstvo' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/stroitelstvo.png' %}')" ></a>
+    <a href="{% url 'svyz' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/svyz.png' %}')" ></a>
+    <a href="{% url 'oos' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/oos.png' %}')" ></a>
+    <a href="{% url 'shop' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/shop.png' %}')"></a>
+    <a href="{% url 'educationj' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/education2.png' %}')" ></a>
+    <a href="{% url 'sportj' %}" class="nwnd2-button btn btn-primary"  style="background-image: url('{% static 'image/sport.png' %}')"></a>
+    <a href="{% url 'finansy' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/finansy.png' %}')" ></a>
+    <a href="{% url 'imysh' %}" class="nwnd2-button btn btn-primary" style="background-image: url('{% static 'image/imysh.png' %}')"></a>
+</div>
+
+<a href = "{% url 'home'%} " class = "back-button">Назад</a>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+li{
+margin:15px;
+list-style: none;
+
+}
+a{
+color:black;
+text-decoration:none;
+
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: white;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #ababab;
+}
+
+a:active {
+  background: grey;
+  color: black;
+}
+
+.back-button {
+    position: fixed; /* Зафиксировать позицию */
+    left: 10px; /* Отступ слева */
+    bottom: 10px; /* Отступ снизу */
+    font-weight: bold; /* Жирный шрифт */
+    color: #007bff; /* Цвет текста (синий) */
+    background-color: #fff; /* Цвет фона (белый) */
+    padding: 10px 15px; /* Отступы вокруг текста */
+    border: 2px solid #007bff; /* Граница кнопки */
+    border-radius: 5px; /* Закругленные углы */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для фона и цвета текста */
+}
+
+.back-button:hover {
+    background-color: #007bff; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+h1{
+ font-family:Times, Times New Roman, serif;
+ }

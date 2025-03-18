@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Документы</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 style="color: blue ;">Информация службы "Одно окно"</h1>
+
+    <div class="container">
+        <div class="left-container">
+            <h2><a href="{% url 'procedures'%}">Административные процедуры по заявлениям граждан</a></h2>
+        </div>
+        <div class="right-container">
+            <h2><a href="{% url 'juridical'%}">Административные процедуры по заявлениям юридических лиц</a></h2>
+        </div>
+    </div>
+
+ <div class = "column">
+     <p>ВЫШЕСТОЯЩИЙ ГОСУДАРСТВЕННЫЙ ОРГАН:</p>
+     <p>Могилевский областной исполнительный комитет,</p>
+     <p>212030, г. Могилев, ул. ул. Первомайская, 71.</p>
+     <p>Режим работы: с 8.00 до 13.00, с 14.00 до 17.00, кроме выходных и праздничных дней
+</p>
+ </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+from django.urls import path
+from .views import (
+    index, home, procedures, juridical,
+    upload_document, edit_document, register,
+    architecture, education, housingrelations,
+    laborandsocialprotection, money, stroitelstvo,
+    svyz, oos, shop, sportj, finansy,
+    imysh, doc, guardianship, sport,
+    nature, transport, agriculture, archieve,
+    army, rege, archieve1, archieva2, educationj, category_documents
+)
+
+urlpatterns = [
+    path('index/', index, name='index'),
+    path('', home, name='home'),
+    path('procedures/', procedures, name='procedures'),
+    path('juridical/', juridical, name='juridical'),
+    path('upload/<str:category>/', upload_document, name='upload_document'),
+    path('<str:category>/', category_documents, name='category_documents'),
+    path('edit/<int:document_id>/', edit_document, name='edit_document'),
+    path('register/', register, name='register'),
+    path('architecture/', architecture, name='architecture'),
+    path('education/', education, name='education'),
+    path('housingrelations/', housingrelations, name='housingrelations'),
+    path('laborandsocialprotection/', laborandsocialprotection, name='laborandsocialprotection'),
+    path('money/', money, name='money'),  # Убедитесь, что этот маршрут есть
+    path('stroitelstvo/', stroitelstvo, name='stroitelstvo'),
+    path('svyz/', svyz, name='svyz'),
+    path('oos/', oos, name='oos'),
+    path('shop/', shop, name='shop'),
+    path('sportj/', sportj, name='sportj'),
+    path('finansy/', finansy, name='finansy'),
+    path('imysh/', imysh, name='imysh'),
+    path('doc/', doc, name='doc'),
+    path('guardianship/', guardianship, name='guardianship'),
+    path('sport/', sport, name='sport'),
+    path('nature/', nature, name='nature'),
+    path('transport/', transport, name='transport'),
+    path('agriculture/', agriculture, name='agriculture'),
+    path('archieve/', archieve, name='archieve'),
+    path('army/', army, name='army'),
+    path('rege/', rege, name='rege'),
+    path('archieve1/', archieve1, name='archieve1'),
+    path('archieva2/', archieva2, name='archieva2'),
+    path('educationj/', educationj, name='educationj'),
+]

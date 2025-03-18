@@ -1,0 +1,42 @@
+li{
+margin:15px;
+list-style: none;
+
+}
+a{
+color:black;
+text-decoration:none;
+
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: white;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #ababab;
+}
+
+a:active {
+  background: grey;
+  color: black;
+}
+
+.back-button {
+    font-size: 1.5em; /* Увеличьте размер шрифта */
+    font-weight: bold; /* Сделать текст жирным (по желанию) */
+}
+
+h1{
+ font-family:Times, Times New Roman, serif;
+ }

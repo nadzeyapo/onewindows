@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация и связь</title>
+</head>
+<body>
+
+<h1>Административные процедуры по заявлениям граждан в сфере "Информация и связь"</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'nwnd/css/architecture.css' %}">
+ {% if documents %}
+        <ul>
+            {% for document in documents %}
+                <li>
+                    <a href="{{ document.file.url }}">{{ document.title }}</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'edit_document' document.id %}">Редактировать</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Документы отсутствуют.</p>
+    {% endif %}
+
+    <a href="{% url 'juridical' %}" class="back-button">Назад</a>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'upload_document' 'svyz' %}">Загрузить новый документ</a> <!-- Исправлено здесь -->
+    {% endif %}
+
+</body>
+</html>

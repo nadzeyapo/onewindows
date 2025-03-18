@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Административные процедуры по заявлениям граждан</title>
+<link rel="stylesheet" href="{% static 'css/procedures.css' %}">
+
+</head>
+<body>
+
+<div  class="container">
+      <a href="{% url 'housingrelations' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/housingrelations1.png' %}'"></a>
+<a href="{% url 'laborandsocialprotection' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/Laborandsocialprotection.png' %}'"></a>
+   <a  href="{% url 'doc' %}"  class="nwnd1-button btn btn-primary"  style="background-image: url('{% static 'image/doc.png' %}'" ></a>
+    <a href="{% url 'guardianship' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/guardianship.png' %}'"></a>
+     <a  href="{% url 'education' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/education.png' %}')" ></a>
+    <a href="{% url 'sport' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/sport.png' %}'"></a>
+        <a href="{% url 'architecture' %}" class="nwnd-button btn btn-primary" style="background-image: url('{% static 'image/architecture2.png' %}'"></a>
+    <a href="{% url 'transport' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/transport.png' %}'" ></a>
+    <a href="{% url 'nature' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/nature.png' %}'"></a>
+    <a href="{% url 'agriculture' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/agriculture.png' %}'"></a>
+    <a href="{% url 'army' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/army.png' %}'"></a>
+ <a href="{% url 'rege' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/rege.png' %}')"> </a>
+ <a href="{% url 'archieve' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/arhive2.png' %}')"> </a>
+ <a href="{% url 'archieve1' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/arhive1.png' %}')"></a>
+ <a href="{% url 'archieva2' %}" class="nwnd1-button btn btn-primary" style="background-image: url('{% static 'image/arhive3.png' %}')"> </a>
+
+</div>
+<a href="{% url 'home' %}" class="back-button">Назад</a>
+</body>
+</html>

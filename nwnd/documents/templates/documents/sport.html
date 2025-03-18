@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Физическая культура и спорт, туризм, культура</title>
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'nwnd/css/architecture.css' %}">
+</head>
+<body>
+<h1>Административные процедуры по заявлениям граждан в сфере "Физическая культура и спорт, туризм, культура"</h1>
+
+  {% if documents %}
+        <ul>
+            {% for document in documents %}
+                <li>
+                    <a href="{{ document.file.url }}">{{ document.title }}</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'edit_document' document.id %}">Редактировать</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Документы отсутствуют.</p>
+    {% endif %}
+
+    <a href="{% url 'procedures' %}" class="back-button">Назад</a>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'upload_document' 'sport' %}">Загрузить новый документ</a>
+    {% endif %}
+</body>
+</html>

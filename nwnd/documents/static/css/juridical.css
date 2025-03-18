@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+
+}
+h1{
+ font-size: 35px;}
+
+h2{
+ font-size: 30px;
+ text-align:left;
+ font-family:Times, Times New Roman, serif;
+ font-weight: normal; }
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Используем Flexbox для расположения кнопок */
+    justify-content: center; /* Центрируем кнопки */
+    align-items: center; /* Выравниваем кнопки по вертикали */
+    gap: 10px; /* Отступ между кнопками */
+    margin-top: 0px; /* Отступ сверху */
+}
+
+.nwnd2-button {
+    flex: 1 1 calc(28% - 25px); /* Устанавливаем ширину кнопки в 30% минус отступы */
+    display: inline-block; /* Необязательно, если используете flex */
+    padding: 10px;
+    background-size: cover; /* Масштабируем изображение */
+    border-radius: 15px;
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    box-sizing: border-box; /* Учитываем отступы и границы в размерах */
+    height: 245px;/* Установите высоту кнопки */
+}
+
+.nwnd2-button:hover {
+    background-color: rgba(0, 123, 255, 0.5); /* Полупрозрачный цвет при наведении */
+}
+
+
+.back-button {
+    position: fixed; /* Зафиксировать позицию */
+    left: 10px; /* Отступ слева */
+    bottom: 10px; /* Отступ снизу */
+    font-weight: bold; /* Жирный шрифт */
+    color: #007bff; /* Цвет текста (синий) */
+    background-color: #fff; /* Цвет фона (белый) */
+    padding: 10px 15px; /* Отступы вокруг текста */
+    border: 2px solid #007bff; /* Граница кнопки */
+    border-radius: 5px; /* Закругленные углы */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для фона и цвета текста */
+}
+
+.back-button:hover {
+    background-color: #007bff; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}

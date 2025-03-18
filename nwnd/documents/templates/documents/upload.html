@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка документа</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #444;
+    margin-top: 40px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+a.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <h1>Загрузить документ{% if current_category %} для {{ current_category }}{% endif %}</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Загрузить</button>
+    </form>
+    <h2>Юридические лица </h2>
+<ul>
+    <li><a href="{% url 'upload_document' 'money' %}">Экономические отношения</a></li>
+  <li><a href="{% url 'upload_document' 'stroitelstvo' %}">Проектирование и сторительство</a></li>
+    <li><a href="{% url 'upload_document' 'svyz' %}">Информация и связь</a></li>
+    <li><a href="{% url 'upload_document' 'oos' %}">Охрана окружающей среды и природопользование</a></li>
+    <li><a href="{% url 'upload_document' 'shop' %}">Торговля</a></li>
+    <li><a href="{% url 'upload_document' 'educationj' %}">Образование и молодежная политика (юридические лица)</a></li>
+    <li><a href="{% url 'upload_document' 'sportj' %}">Физическая культура и спорт( юридические люди)</a></li>
+    <li><a href="{% url 'upload_document' 'finansy' %}">Финансы, деятельность организации азартные игры и лотареи</a></li>
+    <li><a href="{% url 'upload_document' 'imysh' %}">Имущественные и земельные правоотношения</a></li>
+    </ul>
+    <h2>Физические лица</h2>
+    <ul>
+        <li><a href="{% url 'upload_document' 'architecture' %}">Архитектура</a></li>
+    <li><a href="{% url 'upload_document' 'education' %}">Образование</a></li>
+    <li><a href="{% url 'upload_document' 'housingrelations' %}">Жилищные правоотношения</a></li>
+    <li><a href="{% url 'upload_document' 'laborandsocialprotection' %}">Труд и социальная защита</a></li>
+    <li><a href="{% url 'upload_document' 'doc' %}">Документы, подтверждающие на социальные</a></li>
+    <li><a href="{% url 'upload_document' 'guardianship' %}">Опека, попечительство,патронаж.</a></li>
+    <li><a href="{% url 'upload_document' 'sport' %}">Физическая культура и спорт,туризм</a></li>
+    <li><a href="{% url 'upload_document' 'transport' %}">Транспорт</a></li>
+    <li><a href="{% url 'upload_document' 'nature' %}">Природопользование</a></li>
+    <li><a href="{% url 'upload_document' 'agriculture' %}">Сельское хозяйство</a></li>
+    <li><a href="{% url 'upload_document' 'army' %}">Воинская обязанность, прохождение альтернативной службы</a></li>
+    <li><a href="{% url 'upload_document' 'rege' %}">Государственная регистрация недвижимого имущества, прав на него и сделок с ним</a></li>
+    <li><a href="{% url 'upload_document' 'achieve' %}">Получение информации из Единого государственного регистра юридических лиц и индивидуальных предпринимателей</a></li>
+    <li><a href="{% url 'upload_document' 'achieve1' %}">Полученные доходы и уплаченные налоги, сборы (пошлины)</a></li>
+    <li><a href="{% url 'upload_document' 'achieve2' %}">Получение информации из архивных документов</a></li>
+
+    <!-- добавьте другие категории -->
+</ul>
+    <a href="{% url 'index' %}">Назад</a>
+</body>
+</html>
