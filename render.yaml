@@ -1,13 +1,9 @@
 version: 1
 services:
   - type: web
-    name: one-windows-app          # Замените на имя вашего приложения
+    name: one-windows-app  # Уникальное имя вашего приложения
     env: python
-    plan: free                   # Выберите план (free, starter и т.д.)
-    runtime: python              # Укажите версию Python, если необходимо
+    plan: free
+    runtime: python-3.9    # Укажите версию Python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn nwnd.wsgi:application --log-file -"  # Или используйте waitress
-    routes:
-      - type: path
-        path: /
-        service: one-windows
+    startCommand: "gunicorn nwnd.wsgi:application --log-file -"
